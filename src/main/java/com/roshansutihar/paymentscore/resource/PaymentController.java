@@ -41,7 +41,11 @@ import java.util.*;
 @Slf4j
 @RequiredArgsConstructor
 @Validated
-@CrossOrigin(origins = {"http://localhost:8092", "http://localhost:8090", "http://localhost:8094"})
+@CrossOrigin(origins = {
+        "${BANK_API}",
+        "${POS_API}",
+        "${MERCHANT_API}"
+})
 
 public class PaymentController {
 
